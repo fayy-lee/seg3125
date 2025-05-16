@@ -1,0 +1,16 @@
+{
+    "social": [
+        {
+            "network" : "linkedin",
+            "href": "https://www.linkedin.com/in/fay-lee/"
+        },
+        {
+            "network" : "github",
+            "href": "https://github.com/fayy-lee"
+        },
+        {
+            "network" : "email",
+            "href": "mailto:flee081@uottawa.ca"
+        }
+    ]
+}

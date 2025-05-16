@@ -1,0 +1,34 @@
+{
+    "logo" : {
+        "source": "images/logo.png",
+        "height" : 45,
+        "width" : 50
+    },
+    "sections": [
+        {
+            "title": "Home",
+            "href": "/"
+        },
+        {
+            "title": "About",
+            "href": "/about"
+        },
+         {
+            "title": "How I Work",
+            "href": "/howiwork"
+        },
+        {
+            "title": "Case Study 1",
+            "href": "/casestudy1"
+        },
+        {
+            "title": "Case Study 2",
+            "href": "/casestudy2"
+        },
+        {
+            "title": "Case Study 3",
+            "href": "/casestudy3"
+        }
+    ]
+
+}
