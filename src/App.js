@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 
 import About from './components/About.jsx';
@@ -8,7 +8,6 @@ import CaseStudy2 from './components/CaseStudy2.jsx';
 import CaseStudy3 from './components/CaseStudy3.jsx';
 
 import AppContext from './AppContext';
-import routesConfig from './data/routes.json';  // Updated import
 
 const componentMap = {
   About,
@@ -20,6 +19,29 @@ const componentMap = {
 
 function App() {
   const [globalState, setGlobalState] = useState({});
+  const [routesConfig, setRoutesConfig] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    fetch('/profile/routes.json')  // path relative to public folder root
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error('Failed to load routes.json');
+        }
+        return response.json();
+      })
+      .then((data) => {
+        setRoutesConfig(data);
+        setLoading(false);
+      })
+      .catch((error) => {
+        console.error('Error loading routes:', error);
+        setLoading(false);
+      });
+  }, []);
+
+  if (loading) return <div>Loading routes...</div>;
+  if (!routesConfig) return <div>Error loading routes configuration.</div>;
 
   return (
     <AppContext.Provider value={{ globalState, setGlobalState }}>
