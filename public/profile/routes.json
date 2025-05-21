@@ -1,5 +1,5 @@
 {
-  "routes": [
+  "sections": [
     {
       "component": "About",
       "path": "/about",
