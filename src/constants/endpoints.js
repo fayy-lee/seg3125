@@ -1,4 +1,4 @@
-const endpoints = {
+export const endpoints = {
   navbar: '/profile/navbar.json',
   routes: '/profile/routes.json',
   home: '/profile/home.json',
