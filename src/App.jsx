@@ -1,8 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-import { endpoints } from './constants/endpoints';
-
 import About from './components/About';
 import HowIWork from './components/HowIWork';
 import CaseStudy1 from './components/CaseStudy1';
