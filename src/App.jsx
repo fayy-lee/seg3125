@@ -1,30 +1,25 @@
 import React from 'react';
-import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { BrowserRouter } from 'react-router-dom';
-import { ThemeProvider } from 'styled-components';
-import useDarkMode from 'use-dark-mode';
-import AppContext from './AppContext';
-import MainApp from './MainApp';
-import GlobalStyles from './theme/GlobalStyles';
-import { lightTheme, darkTheme } from './theme/themes';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
-function App() {
-  window.matchMedia = null;
-  const darkMode = useDarkMode(true);
+// Import your other components (no need to include .jsx extension)
+import About from './components/About';
+import HowIWork from './components/HowIWork';
+import CaseStudy1 from './components/CaseStudy1';
+import CaseStudy2 from './components/CaseStudy2';
+import CaseStudy3 from './components/CaseStudy3';
 
+const App = () => {
   return (
-    <AppContext.Provider value={{ darkMode }}>
-      <ThemeProvider theme={darkMode.value ? darkTheme : lightTheme}>
-        <GlobalStyles />
-        <div className="App">
-          <BrowserRouter>
-            <MainApp />
-          </BrowserRouter>
-        </div>
-      </ThemeProvider>
-    </AppContext.Provider>
+    <Router>
+      <Switch>
+        <Route exact path="/" component={About} />
+        <Route path="/how-i-work" component={HowIWork} />
+        <Route path="/case-study-1" component={CaseStudy1} />
+        <Route path="/case-study-2" component={CaseStudy2} />
+        <Route path="/case-study-3" component={CaseStudy3} />
+      </Switch>
+    </Router>
   );
-}
+};
 
 export default App;
