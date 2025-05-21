@@ -16,27 +16,30 @@ function MainApp() {
   }, []);
 
   return (
-  <div className="MainApp">
-    <NavBarWithRouter />
-    <main className="main">
-      <Suspense fallback={<FallbackSpinner />}>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          {data && data.sections.map((route) => {
-            const SectionComponent = React.lazy(() => import(`./components/${route.component}`));
-            return (
-              <Route
-                key={route.headerTitle}
-                path={route.path}
-                element={<SectionComponent header={route.headerTitle} />}
-              />
-            );
-          })}
-        </Routes>
-      </Suspense>
-    </main>
-  </div>
-);
+    <div className="MainApp">
+      <NavBarWithRouter />
+      <main className="main">
+        <Suspense fallback={<FallbackSpinner />}>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            {data &&
+              data.sections.map((route) => {
+                const SectionComponent = React.lazy(() =>
+                  import(`./components/${route.component}`)
+                );
+                return (
+                  <Route
+                    key={route.headerTitle}
+                    path={route.path}
+                    element={<SectionComponent header={route.headerTitle} />}
+                  />
+                );
+              })}
+          </Routes>
+        </Suspense>
+      </main>
+    </div>
+  );
 }
 
 export default MainApp;
