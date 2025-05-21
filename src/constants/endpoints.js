@@ -1,4 +1,4 @@
-export const endpoints = {
+const endpoints = {
   navbar: '/profile/navbar.json',
   routes: '/profile/routes.json',
   home: '/profile/home.json',
@@ -9,3 +9,5 @@ export const endpoints = {
   casestudy2: '/profile/casestudy2.json',
   casestudy3: '/profile/casestudy3.json',
 };
+
+export default endpoints;
