@@ -1,57 +1,46 @@
 import React, { useState, useEffect } from 'react';
-import { Container, Row } from 'react-bootstrap';
+import ReactMarkdown from 'react-markdown';
+import { Container, Row, Col } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 import Fade from 'react-reveal';
 import Header from './Header';
 import endpoints from '../constants/endpoints';
-import ProjectCard from './projects/ProjectCard';
 import FallbackSpinner from './FallbackSpinner';
-import '../css/projects.css';
 
-const styles = {
-  containerStyle: {
-    marginBottom: 25,
-  },
-};
-
-const Projects = (props) => {
-  const { header } = props;
+function howiwork({ header }) {
   const [data, setData] = useState(null);
 
   useEffect(() => {
-    fetch(endpoints.projects, {
-      method: 'GET',
-    })
+    fetch(endpoints.howiwork)
       .then((res) => res.json())
       .then((res) => setData(res))
-      .catch((err) => err);
+      .catch((err) => console.error(err));
   }, []);
-
-  const numberOfItems = data ? data.length : 6;
 
   return (
     <>
       <Header title={header} />
-      {data
-        ? (
-          <div className="section-content-container">
-            <Container style={styles.containerStyle}>
-              <Row xs={1} sm={1} md={2} lg={3} className="g-4">
-                {data.projects?.slice(0, numberOfItems).map((project) => (
-                  <Fade key={project.title}>
-                    <ProjectCard project={project} />
-                  </Fade>
-                ))}
+      <div className="section-content-container">
+        <Container>
+          {data ? (
+            <Fade>
+              <Row>
+                <Col style={{ fontSize: '1.2em', whiteSpace: 'pre-wrap' }}>
+                  <ReactMarkdown>{data.howiwork}</ReactMarkdown>
+                </Col>
               </Row>
-            </Container>
-          </div>
-        ) : <FallbackSpinner /> }
+            </Fade>
+          ) : (
+            <FallbackSpinner />
+          )}
+        </Container>
+      </div>
     </>
   );
-};
+}
 
-Projects.propTypes = {
+howiwork.propTypes = {
   header: PropTypes.string.isRequired,
 };
 
-export default Projects;
+export default howiwork;
