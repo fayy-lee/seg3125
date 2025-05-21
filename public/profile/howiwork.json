@@ -1,83 +1,50 @@
 {
-    "projects" : [
-        {
-            "image" : "images/projects/yatzy.jpg",
-            "title": "Yatzy Game",
-            "bodyText": "-  Developed a single-player Yatzy game, integrating server-side functionality to manage status and calculate scores\n -  Implemented AJAX communication, allowing dynamic updates, enhancing user interactivity and experience.",
-            "links": [
-                {
-                    "text": "GitHub",
-                    "href": "https://github.com/fayy-lee/yatzygame"
-                },
-                {
-                    "text": "Demo",
-                    "href": "https://drive.google.com/file/d/1uqNAbjt2syjusSZO2J2qGKX62WW6EdWj/view"
-                }
-            ],
-            "tags" : [
-                "JavaScript",
-                "HTML",
-                "CSS",
-                "PHP"
-            ]
-        },
-        {
-            "image" : "images/projects/portfolio-poster.png",
-            "title": "Hotel Management System",
-            "bodyText": "-  e-hotel web application with a database that performs administrative actions based on the user role\n -  Dynamic, users and admin can easily change data.",
-            "links": [
-                {
-                    "text": "GitHub",
-                    "href": "https://github.com/fayy-lee/CSI2132_GRP170_PROJECT"
-                },
-                {
-                    "text": "Demo",
-                    "href": "https://drive.google.com/file/d/1TCFlfUVLcc_L2gGL6qzd38WWW1wvPYfA/view"
-                }
-            ],
-            "tags" : [
-                "Java",
-                "HTML",
-                "CSS",
-                "SQL"
-            ]
-        },
-        {
-            "image" : "images/projects/med.jpg",
-            "title": "Healthcare Appointment Management System",
-            "bodyText": "- Android application using **Java** and **Android Studio** to streamline the process of healthcare appointment scheduling and management via different roles which gain access to their associative information.",
-            "links": [
-                {
-                    "text": "GitHub",
-                    "href": "https://github.com/fayy-lee/project-project-group-20"
-                }
-            ],
-            "tags" : [
-                "Java",
-                "Android Studio"
-            ]
-        },
-        {
-            "image" : "images/projects/firstFin.png",
-            "title": "myFirstFinance",
-            "bodyText": "- Full-stack web application using a variety of technologies such as **React** to create the frontend\n - Developed collaboratively for the Concordia University hackathon (ConUHacks)",
-            "links": [
-                {
-                    "text": "GitHub",
-                    "href": "https://github.com/fayy-lee/sunlife-app"
-                },
-                {
-                    "text": "Demo",
-                    "href": "https://my-first-finance-app-5sa8.vercel.app/form"
-                }
-            ],
-            "tags" : [
-                "React",
-                "Next.js",
-                "JavaScript",
-                "CSS",
-                "HTML"
-            ]
-        }
-    ]
+  "howiwork": {
+    "title": "How I Work",
+    "description": "As a student currently enrolled in a UI/UX design course, I am actively learning foundational principles of user interface design, usability, and the user-centered design process. My workflow is evolving as I gain hands-on experience through coursework, projects, and research-based design practices.",
+    "sections": [
+      {
+        "heading": "What I’m Learning",
+        "bullets": [
+          "Visual hierarchy",
+          "Consistency and feedback",
+          "User-centered design",
+          "Accessibility and inclusive design",
+          "Heuristic evaluation",
+          "Information architecture"
+        ],
+        "links": [
+          {
+            "label": "Nielsen Norman Group (NN/g)",
+            "url": "https://www.nngroup.com/"
+          },
+          {
+            "label": "Material Design by Google",
+            "url": "https://m3.material.io/"
+          },
+          {
+            "label": "Interaction Design Foundation",
+            "url": "https://www.interaction-design.org/"
+          }
+        ]
+      },
+      {
+        "heading": "My (Developing) Design Workflow",
+        "steps": [
+          "Research & Requirements Gathering – Understand user needs through interviews, surveys, or competitive analysis.",
+          "Sketching & Wireframing – Use tools like Figma to outline basic layouts and interactions.",
+          "Prototyping – Create interactive prototypes that simulate user flow and behaviors.",
+          "Feedback & Iteration – Conduct usability testing with peers and iterate on design based on findings.",
+          "Final UI Design – Apply visual styling, typography, and branding for a polished product.",
+          "Handoff or Implementation – Prepare assets and design specs for development."
+        ]
+      },
+      {
+        "heading": "Course I'm Taking",
+        "courseTitle": "User Interface Design (SEG3125) – University of Ottawa",
+        "courseDescription": "Includes topics like wireframing, usability heuristics, and responsive UI design."
+      }
+    ],
+    "note": "This section will be updated throughout the semester as I apply new concepts and develop a more refined design process."
+  }
 }

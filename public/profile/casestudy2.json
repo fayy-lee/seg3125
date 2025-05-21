@@ -1,12 +1,4 @@
 {
-    "education":[
-        {
-            "title": "Sep 2022 - Dec 2026",
-            "cardTitle": "BSc., Computer Science",
-            "cardSubtitle":"University of Ottawa, Ottawa",
-            "icon" : {
-                "src": "images/education/lorem-ipsum.png"
-            }
-        }
-    ]
+    "casestudy2": "Coming Soon!",
+    "imageSource": "images/casestudy2/placeholder.png"
 }
