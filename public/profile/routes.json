@@ -6,24 +6,24 @@
             "headerTitle": "About"
         },
         {
-            "component": "Skills",
-            "path": "/skills",
-            "headerTitle": "Skills"
+            "component": "HowIWork",
+            "path": "/howiwork",
+            "headerTitle": "HowIWork"
         },
         {
-            "component": "Education",
-            "path": "/education",
-            "headerTitle": "Education"
+            "component": "CaseStudy1",
+            "path": "/casestudy1",
+            "headerTitle": "CaseStudy1"
         },
         {
-            "component": "Experience",
-            "path": "/experience",
-            "headerTitle": "Experience"
+            "component": "CaseStudy2",
+            "path": "/casestudy2",
+            "headerTitle": "CaseStudy2"
         },
         {
-            "component": "Projects",
-            "path": "/projects",
-            "headerTitle": "Projects"
+            "component": "CaseStudy3",
+            "path": "/casestudy3",
+            "headerTitle": "CaseStudy3"
         }
     ]
 }
