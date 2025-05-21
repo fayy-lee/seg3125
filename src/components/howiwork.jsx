@@ -7,7 +7,7 @@ import Header from './Header';
 import endpoints from '../constants/endpoints';
 import FallbackSpinner from './FallbackSpinner';
 
-function howiwork({ header }) {
+function HowIWork({ header }) {
   const [data, setData] = useState(null);
 
   useEffect(() => {
@@ -39,8 +39,8 @@ function howiwork({ header }) {
   );
 }
 
-howiwork.propTypes = {
+HowIWork.propTypes = {
   header: PropTypes.string.isRequired,
 };
 
-export default howiwork;
+export default HowIWork;

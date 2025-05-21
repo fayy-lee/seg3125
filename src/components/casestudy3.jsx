@@ -24,14 +24,12 @@ const styles = {
   },
 };
 
-function casestudy3(props) {
+function CaseStudy3(props) {
   const { header } = props;
   const [data, setData] = useState(null);
 
   const parseIntro = (text) => (
-    <ReactMarkdown
-      children={text}
-    />
+    <ReactMarkdown children={text} />
   );
 
   useEffect(() => {
@@ -48,28 +46,28 @@ function casestudy3(props) {
       <Header title={header} />
       <div className="section-content-container">
         <Container>
-          {data
-            ? (
-              <Fade>
-                <Row>
-                  <Col style={styles.introTextContainer}>
-                    {parseIntro(data.casestudy3)}
-                  </Col>
-                  <Col style={styles.introImageContainer}>
-                    <img src={data?.imageSource} alt="placeholder" />
-                  </Col>
-                </Row>
-              </Fade>
-            )
-            : <FallbackSpinner />}
+          {data ? (
+            <Fade>
+              <Row>
+                <Col style={styles.introTextContainer}>
+                  {parseIntro(data.casestudy3)}
+                </Col>
+                <Col style={styles.introImageContainer}>
+                  <img src={data?.imageSource} alt="placeholder" />
+                </Col>
+              </Row>
+            </Fade>
+          ) : (
+            <FallbackSpinner />
+          )}
         </Container>
       </div>
     </>
   );
 }
 
-casestudy3.propTypes = {
+CaseStudy3.propTypes = {
   header: PropTypes.string.isRequired,
 };
 
-export default casestudy3;
+export default CaseStudy3;
