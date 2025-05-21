@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 
-import About from './components/About';
-import HowIWork from './components/HowIWork';
-import CaseStudy1 from './components/CaseStudy1';
-import CaseStudy2 from './components/CaseStudy2';
-import CaseStudy3 from './components/CaseStudy3';
+import About from './components/About.jsx';
+import HowIWork from './components/HowIWork.jsx';
+import CaseStudy1 from './components/CaseStudy1.jsx';
+import CaseStudy2 from './components/CaseStudy2.jsx';
+import CaseStudy3 from './components/CaseStudy3.jsx';
 
 import AppContext from './context/AppContext';
 import routesConfig from './data/routes.json';  // Updated import
