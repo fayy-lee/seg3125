@@ -10,7 +10,7 @@ import GlobalStyles from './theme/GlobalStyles';
 import { lightTheme, darkTheme } from './theme/themes';
 
 function App() {
-  window.matchMedia = null;
+ // window.matchMedia = null;
   const darkMode = useDarkMode(true);
 
   return (
