@@ -7,7 +7,7 @@ import CaseStudy1 from './components/CaseStudy1.jsx';
 import CaseStudy2 from './components/CaseStudy2.jsx';
 import CaseStudy3 from './components/CaseStudy3.jsx';
 
-import AppContext from './context/AppContext';
+import AppContext from './AppContext';
 import routesConfig from './data/routes.json';  // Updated import
 
 const componentMap = {
