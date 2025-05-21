@@ -1,4 +1,8 @@
 {
     "casestudy2": "Coming Soon!",
+<<<<<<< HEAD
     "imageSource": "/images/casestudy2/placeholder.png"
+=======
+    "imageSource": "images/casestudy2/placeholder.png"
+>>>>>>> b24287e (added case study and how i work content)
 }
