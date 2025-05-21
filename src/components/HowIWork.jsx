@@ -1,20 +1,46 @@
 import React, { useState, useEffect } from 'react';
 import ReactMarkdown from 'react-markdown';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container, Col, Row } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 import Fade from 'react-reveal';
 import Header from './Header';
 import endpoints from '../constants/endpoints';
 import FallbackSpinner from './FallbackSpinner';
 
-function HowIWork({ header }) {
+const styles = {
+  introTextContainer: {
+    margin: 10,
+    flexDirection: 'column',
+    whiteSpace: 'pre-wrap',
+    textAlign: 'left',
+    fontSize: '1.2em',
+    fontWeight: 500,
+  },
+  introImageContainer: {
+    margin: 10,
+    justifyContent: 'center',
+    alignItems: 'center',
+    display: 'flex',
+  },
+};
+
+function HowIWork(props) {
+  const { header } = props;
   const [data, setData] = useState(null);
 
+  const parseIntro = (text) => (
+    <ReactMarkdown
+      children={text}
+    />
+  );
+
   useEffect(() => {
-    fetch(endpoints.howiwork)
+    fetch(endpoints.howiwork, {
+      method: 'GET',
+    })
       .then((res) => res.json())
       .then((res) => setData(res))
-      .catch((err) => console.error(err));
+      .catch((err) => err);
   }, []);
 
   return (
@@ -22,17 +48,20 @@ function HowIWork({ header }) {
       <Header title={header} />
       <div className="section-content-container">
         <Container>
-          {data ? (
-            <Fade>
-              <Row>
-                <Col style={{ fontSize: '1.2em', whiteSpace: 'pre-wrap' }}>
-                  <ReactMarkdown>{data.howiwork}</ReactMarkdown>
-                </Col>
-              </Row>
-            </Fade>
-          ) : (
-            <FallbackSpinner />
-          )}
+          {data
+            ? (
+              <Fade>
+                <Row>
+                  <Col style={styles.introTextContainer}>
+                    {parseIntro(data.howiwork)}
+                  </Col>
+                  <Col style={styles.introImageContainer}>
+                    <img src={data?.imageSource} alt="profile" />
+                  </Col>
+                </Row>
+              </Fade>
+            )
+            : <FallbackSpinner />}
         </Container>
       </div>
     </>

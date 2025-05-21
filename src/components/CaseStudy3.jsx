@@ -29,7 +29,9 @@ function CaseStudy3(props) {
   const [data, setData] = useState(null);
 
   const parseIntro = (text) => (
-    <ReactMarkdown children={text} />
+    <ReactMarkdown
+      children={text}
+    />
   );
 
   useEffect(() => {
@@ -46,20 +48,20 @@ function CaseStudy3(props) {
       <Header title={header} />
       <div className="section-content-container">
         <Container>
-          {data ? (
-            <Fade>
-              <Row>
-                <Col style={styles.introTextContainer}>
-                  {parseIntro(data.casestudy3)}
-                </Col>
-                <Col style={styles.introImageContainer}>
-                  <img src={data?.imageSource} alt="placeholder" />
-                </Col>
-              </Row>
-            </Fade>
-          ) : (
-            <FallbackSpinner />
-          )}
+          {data
+            ? (
+              <Fade>
+                <Row>
+                  <Col style={styles.introTextContainer}>
+                    {parseIntro(data.casestudy3)}
+                  </Col>
+                  <Col style={styles.introImageContainer}>
+                    <img src={data?.imageSource} alt="profile" />
+                  </Col>
+                </Row>
+              </Fade>
+            )
+            : <FallbackSpinner />}
         </Container>
       </div>
     </>
