@@ -24,7 +24,7 @@ const styles = {
   },
 };
 
-function About3(props) {
+function About4(props) {
   const { header } = props;
   const [data, setData] = useState(null);
 
@@ -35,7 +35,7 @@ function About3(props) {
   );
 
   useEffect(() => {
-    fetch(endpoints.about3, {
+    fetch(endpoints.about4, {
       method: 'GET',
     })
       .then((res) => res.json())
@@ -68,8 +68,8 @@ function About3(props) {
   );
 }
 
-About3.propTypes = {
+About4.propTypes = {
   header: PropTypes.string.isRequired,
 };
 
-export default About3;
+export default About4;
