@@ -24,7 +24,7 @@ const styles = {
   },
 };
 
-function HowIWork(props) {
+function About3(props) {
   const { header } = props;
   const [data, setData] = useState(null);
 
@@ -35,7 +35,7 @@ function HowIWork(props) {
   );
 
   useEffect(() => {
-    fetch(endpoints.howiwork, {
+    fetch(endpoints.about3, {
       method: 'GET',
     })
       .then((res) => res.json())
@@ -53,7 +53,7 @@ function HowIWork(props) {
               <Fade>
                 <Row>
                   <Col style={styles.introTextContainer}>
-                    {parseIntro(data.howiwork)}
+                    {parseIntro(data.about3)}
                   </Col>
                   <Col style={styles.introImageContainer}>
                     <img src={data?.imageSource} alt="profile" />
@@ -68,8 +68,8 @@ function HowIWork(props) {
   );
 }
 
-HowIWork.propTypes = {
+About3.propTypes = {
   header: PropTypes.string.isRequired,
 };
 
-export default HowIWork;
+export default About3;
