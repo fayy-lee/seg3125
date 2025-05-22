@@ -6,24 +6,24 @@
             "headerTitle": "About"
         },
         {
-            "component": "About1",
-            "path": "/about1",
-            "headerTitle": "About1"
+            "component": "case1",
+            "path": "/case1",
+            "headerTitle": "Case 1"
         },
         {
-            "component": "About2",
-            "path": "/about2",
-            "headerTitle": "About2"
+            "component": "case2",
+            "path": "/case2",
+            "headerTitle": "Case 2"
         },
         {
-            "component": "About3",
-            "path": "/about3",
-            "headerTitle": "About3"
+            "component": "case3",
+            "path": "/case3",
+            "headerTitle": "Case 3"
         },
         {
-            "component": "About4",
-            "path": "/about4",
-            "headerTitle": "About4"
+            "component": "work",
+            "path": "/work",
+            "headerTitle": "How I Work"
         }
     ]
 }
