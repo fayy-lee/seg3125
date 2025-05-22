@@ -1,0 +1,207 @@
+/* Reset and base styles */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Navbar fixed at top, black background always */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #232b2b; /* Always a certain colour */
+  padding: 0 30px;
+  height: 60px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+
+.navbar-left .logo {
+  height: 40px;
+  width: auto;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 6px 10px;
+  border-radius: 4px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #b39ddb; /* Lavender */
+  background-color: transparent;
+}
+
+/* Dark/Light Mode Toggle Switch */
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 44px;
+  height: 24px;
+  margin-left: 20px;
+}
+
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: #f6b93b; /* Light mode default (orangey-yellow) */
+  border-radius: 34px;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+
+/* When checked (dark mode) */
+.toggle-switch input:checked + .slider {
+  background-color: #0984e3; /* Blue background for dark mode */
+}
+
+.toggle-switch input:checked + .slider:before {
+  transform: translateX(20px);
+}
+
+/* PAGE CONTAINER */
+.page-container {
+  padding: 100px 30px 50px 30px; /* padding top to clear navbar */
+  max-width: 1000px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* Dark mode and Light mode backgrounds and text */
+.dark-mode {
+  background-color: #121212;
+  color: #e1e1e1;
+}
+
+.light-mode {
+  background-color: #fafafa;
+  color: #222222;
+}
+
+/* CARD STYLES for Case Studies */
+.case-studies-container {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.case-study-card {
+  background-color: #fff;
+  border-radius: 10px;
+  width: 300px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.2s ease;
+  cursor: default;
+}
+
+.case-study-card:hover {
+  transform: translateY(-8px);
+}
+
+.case-study-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.case-study-card .card-text {
+  padding: 15px 10px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+/* Adjust cards background for dark mode */
+.dark-mode .case-study-card {
+  background-color: #1e1e1e;
+  color: #ddd;
+  box-shadow: 0 4px 12px rgba(255,255,255,0.05);
+}
+
+/* ABOUT PAGE */
+.about-content {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.about-content img {
+  width: 180px;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.about-text {
+  max-width: 650px;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  color: inherit;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .navbar-right {
+    gap: 15px;
+  }
+
+  .case-studies-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .case-study-card {
+    width: 90%;
+  }
+
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-content img {
+    width: 140px;
+    margin-bottom: 20px;
+  }
+
+  .about-text {
+    max-width: 100%;
+  }
+}
