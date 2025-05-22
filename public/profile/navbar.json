@@ -13,21 +13,26 @@
             "title": "About",
             "href": "/about"
         },
-         {
-            "title": "How I Work",
-            "href": "/howiwork"
+        {
+            "title": "Skills",
+            "href": "/skills"
         },
         {
-            "title": "Case Study 1",
-            "href": "/casestudy1"
+            "title": "Education",
+            "href": "/education"
         },
         {
-            "title": "Case Study 2",
-            "href": "/casestudy2"
+            "title": "Experience",
+            "href": "/experience"
         },
         {
-            "title": "Case Study 3",
-            "href": "/casestudy3"
+            "title": "Projects",
+            "href": "/projects"
+        },
+        {
+            "title": "Resume",
+            "href": "https://drive.google.com/file/d/1uqNAbjt2syjusSZO2J2qGKX62WW6EdWj/view",
+            "type": "link"
         }
     ]
 
