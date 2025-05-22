@@ -4,10 +4,10 @@ const endpoints = {
   home: 'profile/home.json',
   social: 'profile/social.json',
   about: 'profile/about.json',
-  about1: 'profile/case1.json',
-  about2: 'profile/case2.json',
-  about3: 'profile/case3.json',
-  about4: 'profile/work.json',
+  case1: 'profile/case1.json',
+  case2: 'profile/case2.json',
+  case3: 'profile/case3.json',
+  work: 'profile/work.json',
 };
 
 export default endpoints;
