@@ -11,6 +11,7 @@ const endpoints = {
   about1: 'profile/about1.json',
   about2: 'profile/about2.json',
   about3: 'profile/about3.json',
+  about4: 'profile/about4.json',
 };
 
 export default endpoints;

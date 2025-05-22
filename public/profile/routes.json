@@ -19,6 +19,11 @@
             "component": "About3",
             "path": "/about3",
             "headerTitle": "About3"
+        },
+        {
+            "component": "About4",
+            "path": "/about4",
+            "headerTitle": "About4"
         }
     ]
 }
