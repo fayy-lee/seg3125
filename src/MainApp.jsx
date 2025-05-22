@@ -22,11 +22,9 @@ function MainApp() {
         <Suspense fallback={<FallbackSpinner />}>
           <Routes>
             <Route path="/" element={<Home />} />
-              {data &&
-                data.sections.map((route) => {
-                  const SectionComponent = React.lazy(() =>
-                    import(`./components/${route.component}`)
-                  );
+            {data
+                && data.sections.map((route) => {
+                  const SectionComponent = React.lazy(() => import(`./components/${route.component}`));
                   return (
                     <Route
                       key={route.headerTitle}
