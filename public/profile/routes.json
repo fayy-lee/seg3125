@@ -6,24 +6,19 @@
             "headerTitle": "About"
         },
         {
-            "component": "Skills",
-            "path": "/skills",
-            "headerTitle": "Skills"
+            "component": "About1",
+            "path": "/about1",
+            "headerTitle": "About1"
         },
         {
-            "component": "Education",
-            "path": "/education",
-            "headerTitle": "Education"
+            "component": "About2",
+            "path": "/about2",
+            "headerTitle": "About2"
         },
         {
-            "component": "Experience",
-            "path": "/experience",
-            "headerTitle": "Experience"
-        },
-        {
-            "component": "Projects",
-            "path": "/projects",
-            "headerTitle": "Projects"
+            "component": "About3",
+            "path": "/about3",
+            "headerTitle": "About3"
         }
     ]
 }
