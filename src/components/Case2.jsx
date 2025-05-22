@@ -24,7 +24,7 @@ const styles = {
   },
 };
 
-function About1(props) {
+function Case2(props) {
   const { header } = props;
   const [data, setData] = useState(null);
 
@@ -35,7 +35,7 @@ function About1(props) {
   );
 
   useEffect(() => {
-    fetch(endpoints.about1, {
+    fetch(endpoints.case2, {
       method: 'GET',
     })
       .then((res) => res.json())
@@ -53,7 +53,7 @@ function About1(props) {
               <Fade>
                 <Row>
                   <Col style={styles.introTextContainer}>
-                    {parseIntro(data.about)}
+                    {parseIntro(data.case2)}
                   </Col>
                   <Col style={styles.introImageContainer}>
                     <img src={data?.imageSource} alt="profile" />
@@ -68,8 +68,8 @@ function About1(props) {
   );
 }
 
-About1.propTypes = {
+Case2.propTypes = {
   header: PropTypes.string.isRequired,
 };
 
-export default About1;
+export default Case2;

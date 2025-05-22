@@ -24,7 +24,7 @@ const styles = {
   },
 };
 
-function About4(props) {
+function Work(props) {
   const { header } = props;
   const [data, setData] = useState(null);
 
@@ -35,7 +35,7 @@ function About4(props) {
   );
 
   useEffect(() => {
-    fetch(endpoints.about4, {
+    fetch(endpoints.work, {
       method: 'GET',
     })
       .then((res) => res.json())
@@ -53,7 +53,7 @@ function About4(props) {
               <Fade>
                 <Row>
                   <Col style={styles.introTextContainer}>
-                    {parseIntro(data.about3)}
+                    {parseIntro(data.work)}
                   </Col>
                   <Col style={styles.introImageContainer}>
                     <img src={data?.imageSource} alt="profile" />
@@ -68,8 +68,8 @@ function About4(props) {
   );
 }
 
-About4.propTypes = {
+Work.propTypes = {
   header: PropTypes.string.isRequired,
 };
 
-export default About4;
+export default Work;
