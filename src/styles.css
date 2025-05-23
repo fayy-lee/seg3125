@@ -14,12 +14,20 @@ body {
   padding: 0 30px;
   height: 60px;
   position: fixed;
-  width: 100%;
   top: 0;
   z-index: 1000;
   box-shadow: 0 2px 5px rgba(0,0,0,0.5);
 }
-
+.navbar-content {
+  max-width: 1000px;   
+  margin: 0 auto;      /* center horizontally */
+  width: 100%;         /* allow shrinking on small screens */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;     /* some horizontal padding */
+  box-sizing: border-box;
+}
 .navbar-left .logo {
   height: 40px;
   width: auto;
