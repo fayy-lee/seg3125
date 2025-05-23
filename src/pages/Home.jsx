@@ -4,7 +4,7 @@ const Home = () => {
   return (
     <div className="page-container landing">
       <h1>Welcome to My Portfolio</h1>
-      <p>Explore my work and learn more about my approach to design.</p>
+      <p>Hi! Welcome to my portfolio for SEG 3125.</p>
     </div>
   );
 };
