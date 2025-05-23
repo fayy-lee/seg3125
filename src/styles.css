@@ -7,39 +7,50 @@ body {
 
 /* Navbar fixed at top, black background always */
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #232b2b; /* Always a certain colour */
-  padding: 0 30px;
-  height: 60px;
-  position: fixed;
   width: 100%;
+  position: fixed;
   top: 0;
-  z-index: 1000;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+  height: 60px;
+  background-color: #232b2b;
+  padding: 0 30px; /* side padding */
+  box-sizing: border-box;
+  /* Remove flex here to avoid double flex, move to navbar-content */
 }
+
+/* Container inside navbar to center content and space */
 .navbar-content {
-  max-width: 1000px;   
-  margin: 0 auto;      /* center horizontally */
-  width: 100%;         /* allow shrinking on small screens */
+  max-width: 1000px;
+  margin: 0 auto;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 15px;     /* some horizontal padding */
+  padding: 0 15px;
   box-sizing: border-box;
 }
+
+/* Left side: logo aligned left */
+.navbar-left {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
 .navbar-left .logo {
   height: 40px;
   width: auto;
 }
 
+/* Right side: nav links + toggle aligned right */
 .navbar-right {
   display: flex;
   align-items: center;
   gap: 25px;
+  /* Flex shrink to zero to keep right side tight */
+  flex-shrink: 0;
 }
 
+/* Nav links styling */
 .nav-link {
   color: white;
   text-decoration: none;

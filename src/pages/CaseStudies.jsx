@@ -8,11 +8,11 @@ const caseStudies = [
 
 const CaseStudies = () => {
   return (
-    <div className="page-container">
+    <div className="page-container case-studies-section">
       <h1>Case Studies</h1>
-      <div className="cards-container">
+      <div className="case-studies-container">
         {caseStudies.map(({ id, title, image }) => (
-          <div key={id} className="case-card">
+          <div key={id} className="case-study-card">
             <img src={image} alt={title} />
             <h3>{title}</h3>
             <p>Coming Soon!</p>

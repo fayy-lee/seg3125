@@ -2,14 +2,12 @@ import React from "react";
 
 function CaseStudyCard({ title, image, link }) {
   return (
-    <div className="card m-3" style={{ width: "18rem" }}>
-      <img src={image} className="card-img-top" alt={title} />
-      <div className="card-body">
-        <h5 className="card-title">{title}</h5>
-        <a href={link} className="btn btn-primary" onClick={e => e.preventDefault()}>
-          Coming Soon
-        </a>
-      </div>
+    <div className="case-study-card">
+      <img src={image} alt={title} />
+      <h3>{title}</h3>
+      <p>Coming Soon!</p>
+      {/* Or if you want a button/link */}
+      {/* <a href={link} className="btn btn-primary" onClick={e => e.preventDefault()}>Coming Soon</a> */}
     </div>
   );
 }
