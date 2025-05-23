@@ -10,14 +10,13 @@ body {
   width: 100%;
   position: fixed;
   top: 0;
-  height: 60px;
+  height: 75px;              /* increased height */
   background-color: #232b2b;
-  padding: 0 30px; /* side padding */
+  padding: 15px 30px 0 30px; /* top padding added, no bottom padding */
   box-sizing: border-box;
-  /* Remove flex here to avoid double flex, move to navbar-content */
+  z-index: 9999;
 }
 
-/* Container inside navbar to center content and space */
 .navbar-content {
   max-width: 1000px;
   margin: 0 auto;
@@ -25,15 +24,14 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 15px;
+  padding: 0 15px;          /* optional: keep for inner horizontal spacing */
   box-sizing: border-box;
 }
 
-/* Left side: logo aligned left */
 .navbar-left {
   display: flex;
   align-items: center;
-  flex: 1;
+  flex: 1;                  /* pushes left side fully left */
 }
 
 .navbar-left .logo {
@@ -41,13 +39,11 @@ body {
   width: auto;
 }
 
-/* Right side: nav links + toggle aligned right */
 .navbar-right {
   display: flex;
   align-items: center;
   gap: 25px;
-  /* Flex shrink to zero to keep right side tight */
-  flex-shrink: 0;
+  flex-shrink: 0;           /* keep it tight and on right */
 }
 
 /* Nav links styling */
