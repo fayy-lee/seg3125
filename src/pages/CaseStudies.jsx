@@ -23,7 +23,7 @@ const CaseStudies = () => {
             >
               <img src={image} alt={title} />
               <h3>{title}</h3>
-              <p>Coming Soon!</p>
+              <p>Click and see!</p>
             </a>
           ) : (
             <div key={id} className="case-study-card">
