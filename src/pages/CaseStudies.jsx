@@ -1,7 +1,7 @@
 import React from 'react';
 
 const caseStudies = [
-  { id: 1, title: 'Design 1', image: '/images/service.jpg', link: 'https://service-site-seg3125.vercel.app/' },
+  { id: 1, title: 'Service Site', image: '/images/service.jpg', link: 'https://service-site-seg3125.vercel.app/' },
   { id: 2, title: 'Design 2', image: '/images/game.jpg' },
   { id: 3, title: 'Design 3', image: '/images/ecommerce.jpg' },
 ];
