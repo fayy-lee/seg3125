@@ -1,7 +1,7 @@
 import React from 'react';
 
 const caseStudies = [
-  { id: 1, title: 'Design 1', image: '/images/service.jpg' },
+  { id: 1, title: 'Design 1', image: '/images/service.jpg', link: 'https://service-site-seg3125.vercel.app/' },
   { id: 2, title: 'Design 2', image: '/images/game.jpg' },
   { id: 3, title: 'Design 3', image: '/images/ecommerce.jpg' },
 ];
@@ -11,12 +11,27 @@ const CaseStudies = () => {
     <div className="page-container case-studies-section">
       <h1>Case Studies</h1>
       <div className="case-studies-container">
-        {caseStudies.map(({ id, title, image }) => (
-          <div key={id} className="case-study-card">
-            <img src={image} alt={title} />
-            <h3>{title}</h3>
-            <p>Coming Soon!</p>
-          </div>
+        {caseStudies.map(({ id, title, image, link }) => (
+          link ? (
+            <a
+              key={id}
+              href={link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="case-study-card"
+              style={{ textDecoration: 'none', color: 'inherit' }}
+            >
+              <img src={image} alt={title} />
+              <h3>{title}</h3>
+              <p>Coming Soon!</p>
+            </a>
+          ) : (
+            <div key={id} className="case-study-card">
+              <img src={image} alt={title} />
+              <h3>{title}</h3>
+              <p>Coming Soon!</p>
+            </div>
+          )
         ))}
       </div>
     </div>
