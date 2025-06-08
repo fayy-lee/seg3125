@@ -4,6 +4,7 @@ const caseStudies = [
   { id: 1, title: 'Service Site', image: '/images/service.jpg', link: 'https://service-site-seg3125.vercel.app/' },
   { id: 2, title: 'Design 2', image: '/images/game.jpg' },
   { id: 3, title: 'Design 3', image: '/images/ecommerce.jpg' },
+  { id: 4, title: 'Design 4', image: '/images/analytics.png' },
 ];
 
 const CaseStudies = () => {
