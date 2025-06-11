@@ -12,7 +12,7 @@ const CaseStudies = () => {
     <div className="page-container case-studies-section">
       <h1>Case Studies</h1>
       <div className="case-studies-container">
-        {caseStudies.map(({ id, title, image, link }) => (
+        {caseStudies.map(({ id, title, image, link }) =>
           link ? (
             <a
               key={id}
@@ -25,9 +25,6 @@ const CaseStudies = () => {
               <img src={image} alt={title} />
               <h3>{title}</h3>
               <p>Click and see!</p>
-              <img src={image} alt={title} />
-              <h3>{title}</h3>
-              <p>Click and see!</p>
             </a>
           ) : (
             <div key={id} className="case-study-card">
@@ -36,7 +33,7 @@ const CaseStudies = () => {
               <p>Coming Soon!</p>
             </div>
           )
-        ))}
+        )}
       </div>
     </div>
   );
