@@ -2,7 +2,7 @@ import React from 'react';
 
 const caseStudies = [
   { id: 1, title: 'Service Site', image: '/images/service.jpg', link: 'https://service-site-seg3125.vercel.app/' },
-  { id: 2, title: 'Design 2', image: '/images/game.jpg', link: 'https://shadowshift-memory-game.vercel.app/' },
+  { id: 2, title: 'Game Site', image: '/images/game.png', link: 'https://shadowshift-memory-game.vercel.app/' },
   { id: 3, title: 'Design 3', image: '/images/ecommerce.jpg' },
   { id: 4, title: 'Design 4', image: '/images/analytics.png' },
 ];
@@ -22,6 +22,9 @@ const CaseStudies = () => {
               className="case-study-card"
               style={{ textDecoration: 'none', color: 'inherit' }}
             >
+              <img src={image} alt={title} />
+              <h3>{title}</h3>
+              <p>Click and see!</p>
               <img src={image} alt={title} />
               <h3>{title}</h3>
               <p>Click and see!</p>
