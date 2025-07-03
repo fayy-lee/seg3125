@@ -3,7 +3,7 @@ import React from 'react';
 const caseStudies = [
   { id: 1, title: 'Service Site', image: '/images/service.jpg', link: 'https://service-site-seg3125.vercel.app/' },
   { id: 2, title: 'Game Site', image: '/images/game.png', link: 'https://shadowshift-memory-game.vercel.app/' },
-  { id: 3, title: 'Design 3', image: '/images/ecommerce.jpg' },
+  { id: 3, title: 'Design 3', image: '/images/ecommerce.png', link: 'https://ecommerce-site-six-sand.vercel.app/' },
   { id: 4, title: 'Design 4', image: '/images/analytics.png' },
 ];
 
