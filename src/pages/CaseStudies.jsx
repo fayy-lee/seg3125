@@ -12,28 +12,20 @@ const CaseStudies = () => {
     <div className="page-container case-studies-section">
       <h1>Case Studies</h1>
       <div className="case-studies-container">
-        {caseStudies.map(({ id, title, image, link }) =>
-          link ? (
-            <a
-              key={id}
-              href={link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="case-study-card"
-              style={{ textDecoration: 'none', color: 'inherit' }}
-            >
-              <img src={image} alt={title} />
-              <h3>{title}</h3>
-              <p>Click and see!</p>
-            </a>
-          ) : (
-            <div key={id} className="case-study-card">
-              <img src={image} alt={title} />
-              <h3>{title}</h3>
-              <p>Coming Soon!</p>
-            </div>
-          )
-        )}
+        {caseStudies.map(({ id, title, image, link }) => (
+          <a
+            key={id}
+            href={link || '#'}
+            target={link ? '_blank' : '_self'}
+            rel="noopener noreferrer"
+            className="case-study-card"
+            style={{ textDecoration: 'none', color: 'inherit', pointerEvents: link ? 'auto' : 'none' }}
+          >
+            <img src={image} alt={title} />
+            <h3>{title}</h3>
+            <p>Click and see!</p>
+          </a>
+        ))}
       </div>
     </div>
   );
